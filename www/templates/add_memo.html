@@ -1,0 +1,54 @@
+<ion-view view-title="Add Memo">
+	<ion-content>
+		<h1>New Memo</h1>
+
+		<div class="card" style="background: rgba(12, 12, 12, 0.034);">
+			<div class="list">
+				<form ng-submit="addnew_memo(addmemo)">
+					<label class="item item-input item-floating-label">
+						<span class="input-label">From</span>
+						<input type="text" ng-model="addmemo.from" placeholder="From" required />
+					</label>
+					<label class="item item-input item-floating-label">
+						<span class="input-label">To</span>
+						<input type="text" ng-model="addmemo.to" placeholder="To" required />
+					</label>
+					<label class="item item-input item-floating-label">
+						<span class="input-label">LR No</span>
+						<input type="text" ng-model="addmemo.lr_no" placeholder="LR No" required />
+					</label>
+					<label class="item item-input item-floating-label">
+						<span class="input-label">Invoice No</span>
+						<input type="text" ng-model="addmemo.invoice_no" placeholder="Invoice No" required />
+					</label>
+					<label class="item item-input item-floating-label">
+						<span class="input-label">Lorry No</span>
+						<input type="text" ng-model="addmemo.lorry_no" placeholder="Lorry No" required />
+					</label>
+					<label class="item item-input item-stacked-label">
+						<span class="input-label">Date</span>
+						<input type="Date" style="width: 95%;" ng-model="addmemo.date" placeholder="Date" required />
+						<br>
+					</label>
+					<label class="item item-input item-select">
+						<span class="input-label">Vehicle Type</span>
+						<select ng-model="addmemo.veh_type" placeholder="Vehicle Type" required>
+							<option value="LCV">LCV</option>
+							<option value="LPT">LPT</option>
+							<option value="PICKUP">PICKUP</option>
+							<option value="FTL">FTL</option>
+						</select>
+					</label>
+					<label class="item item-input item-floating-label">
+						<span class="input-label">Freight</span>
+						<input type="number" ng-model="addmemo.freight" placeholder="Freight" required />
+					</label>
+					<label class="item">
+						<button class="button button-block button-positive" type="submit">Add Memo</button>
+					</label>
+				</form>
+			</div>
+		</div>
+
+	</ion-content>
+</ion-view>

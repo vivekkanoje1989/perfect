@@ -1,0 +1,123 @@
+<ion-view view-title="Add Lorry Receipt">
+  <ion-content>
+		<h1>New Lorry Receipt</h1>
+    
+    <div class="card" data-ng-init="add_lr_init()" style="background: rgba(12, 12, 12, 0.034);">
+    <div class="list">
+    <form ng-submit="addnew_lr(addconsignment)">
+    	<label class="item item-input item-floating-label">
+		    <span class="input-label">Service tax No</span>
+		    <input type="text" ng-model="addconsignment.servicetaxno" placeholder="Service tax No" readonly />
+		 </label>
+	  <label class="item item-input item-floating-label">
+	    <span class="input-label">Lr No</span>
+	    <input type="text" style="text-transform:uppercase" ng-model="addconsignment.lrno" placeholder="Lr No" required />
+		</label>
+		<label class="item item-input item-select">
+				<span class="input-label">Invoice Division</span>
+				<select ng-model="addconsignment.invDiv" placeholder="Division" required>
+					<option>AD</option>
+					<option>TD</option>
+				</select>
+			</label>
+	  <label class="item item-input item-stacked-label">
+	    <span class="input-label">LR Date</span>
+			<input type="Date" style="width: 95%;" ng-model="addconsignment.Lr_Date" placeholder="LR Date"  required />
+			<br>
+	  </label>
+	  <label class="item item-input item-floating-label">
+	    <span class="input-label">From</span>
+	    <input type="text" ng-model="addconsignment.from" placeholder="From"  required />
+	  </label>
+	  <label class="item item-input item-floating-label">
+	    <span class="input-label">To</span>
+	    <input type="text" ng-model="addconsignment.to" placeholder="To"  required />
+	  </label>
+	  <label class="item item-input item-floating-label">
+	    <span class="input-label">Consigner Name</span>
+	    <input type="text" ng-model="addconsignment.consigner_name" placeholder="Consigner Name"  required />
+	  </label>
+	  <label class="item item-input item-floating-label">
+	    <span class="input-label">Consigner Address</span>
+	    <input type="text" ng-model="addconsignment.consigner_Addr" placeholder="Consigner Address"  required />
+	  </label>
+	  <label class="item item-input item-floating-label">
+	    <span class="input-label">Consignee Name</span>
+	    <input type="text" ng-model="addconsignment.consignee_name" placeholder="Consignee Name"  required />
+	  </label>
+	  <label class="item item-input item-floating-label">
+	    <span class="input-label">Consignee Address Line 1</span>
+	    <input type="text" ng-model="addconsignment.consignee_Addr_l1" placeholder="Consignee Address Line 1"   />
+		</label>
+		<label class="item item-input item-floating-label">
+	    <span class="input-label">Consignee Address Line 2</span>
+	    <input type="text" ng-model="addconsignment.consignee_Addr_l2" placeholder="Consignee Address Line 2"   />
+		</label>
+		<label class="item item-input item-floating-label">
+	    <span class="input-label">Consignee Address Line 3</span>
+	    <input type="text" ng-model="addconsignment.consignee_Addr_l3" placeholder="Consignee Address Line 3"   />
+		</label>
+		<label class="item item-input item-floating-label">
+	    <span class="input-label">Consignee State</span>
+	    <input type="text" ng-model="addconsignment.consignee_state" placeholder="Consignee State"   />
+		</label>
+		<label class="item item-input item-floating-label">
+	    <span class="input-label">Consignee State Code</span>
+	    <input type="text" ng-model="addconsignment.consignee_state_cd" placeholder="Consignee State Code"   />
+		</label>
+		<label class="item item-input item-floating-label">
+	    <span class="input-label">Consignee GSTN No</span>
+	    <input type="text" ng-model="addconsignment.consignee_gstn" placeholder="Consignee GSTN No"   />
+	  </label>
+	  <label class="item item-input item-floating-label">
+	    <span class="input-label">Invoice No</span>
+	    <input type="text" ng-model="addconsignment.invoice_no" placeholder="Invoice No"  required />
+	  </label><label class="item item-input item-floating-label">
+	    <span class="input-label">Vehicle No</span>
+	    <input type="text" ng-model="addconsignment.vehicle_no" placeholder="Vehicle No"  required />
+	  </label>
+	  </label><label class="item item-input item-floating-label">
+	    <span class="input-label">Nature of goods</span>
+	    <input type="text" ng-model="addconsignment.material_type" placeholder="Nature of goods"  required />
+	  </label>
+	  </label><label class="item item-input item-floating-label">
+	    <span class="input-label">No. Of Packages</span>
+	    <input type="number" ng-model="addconsignment.num_packages" placeholder="No. Of Packages"  required />
+	  </label>
+	  </label><label class="item item-input item-floating-label">
+	    <span class="input-label">Actual Weight</span>
+	    <input type="text" ng-model="addconsignment.actual_weight" placeholder="Actual Weight"  required />
+	  </label>
+	  </label><label class="item item-input item-floating-label">
+	    <span class="input-label">GST Tax</span>
+	    <input type="text" ng-model="addconsignment.gst_tax" placeholder="GST Tax"  required />
+	  </label>
+	 <!--  </label><label class="item item-input item-floating-label">
+	    <span class="input-label">Vehicle Type</span>
+	    <input type="text" ng-model="addconsignment.vehicle_type" placeholder="Vehicle Type">
+	  </label>
+	  </label><label class="item item-input item-floating-label">
+	    <span class="input-label">Frieght Rate</span>
+	    <input type="text" ng-model="addconsignment.frieght_rate" placeholder="Frieght Rate">
+	  </label>
+	  </label><label class="item item-input item-floating-label">
+	    <span class="input-label">Detaintion</span>
+	    <input type="text" ng-model="addconsignment.detaintion" placeholder="Detaintion">
+	  </label>
+	  </label><label class="item item-input item-floating-label">
+	    <span class="input-label">Loading Charge</span>
+	    <input type="text" ng-model="addconsignment.loading_charge" placeholder="Loading Charge">
+	  </label>
+	  </label><label class="item item-input item-floating-label">
+	    <span class="input-label">Unloading Charge</span>
+	    <input type="text" ng-model="addconsignment.unloading_charge" placeholder="Unloading Charge">
+	  </label> -->
+	  <label class="item">
+        <button class="button button-block button-positive" type="submit">Add LR</button>
+      </label>
+     </form>
+	</div>
+	</div>
+	
+  </ion-content>
+</ion-view>
