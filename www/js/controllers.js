@@ -99,7 +99,7 @@ angular.module('starter.controllers', ['ionic', 'starter', 'ngCordova'])
     };
 
     // var link = 'http://himalayanpaint.com/perfect_web/';
-    var link = 'http://192.168.0.106/perfect_web/';
+    var link = 'http://www.perfecttransports.com/perfect_web/';
     $scope.syncusers = function () {
       $cordovaSQLite.execute(db, 'SELECT * FROM users', [])
         .then(function (result) {
